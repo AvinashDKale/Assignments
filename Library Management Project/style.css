@@ -1,0 +1,270 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*__________________________________main code  INDEX__________________*/
+
+.wrapper
+{
+   height:610px;
+   width: 1275px;
+  /* background-color:red; */
+
+}
+header
+{
+    height:100px;
+    width: 1275px;
+    background-color: black; 
+    float: top;
+}
+section
+{
+ height:543px;
+    width: 1275px;
+    background-color: gray;   
+     background-image:url("images/st.jpg");
+}
+footer
+{
+height:90px;
+    width: 1275px;
+    background-color: black;
+    float: bottom;
+
+}
+li a{
+color: white;
+text-decoration: none;
+
+}
+nav
+{
+    float: right;
+    word-spacing:20px;
+    padding-top: 0px;
+    padding-bottom:10px;
+    padding-right:30px;
+
+}
+nav li
+{
+    display:inline-block;
+    line-height: 15px;
+
+}
+.logo img
+{
+    padding-left:120px;
+}
+.heading h1
+{
+    padding-left: 30px;
+}
+section .sec_img
+{  height:543px;
+ margin-top: 0px;
+    background-image: url("images/1.jpg");
+}
+.box
+{
+    height:300px;
+    width: 450px;
+    color: white;
+    background-color:transparent;
+    margin:20px auto;
+    padding-left:100px;
+    padding-top: 30px;
+
+}
+.box h1
+{
+    padding: 20px;
+    padding-bottom: 10px;
+}
+.firsth1{
+    padding-left: 100px;
+    padding:5px;
+}
+footer p
+{
+    
+    padding-top: 40px;
+padding-left: 100px;
+ 
+}
+
+/*____________________________Student_Login_______________________*/
+.log_img
+{
+    background-image:url("images/st.jpg");
+}
+
+.box1
+{
+    height: 350px;
+    width: 480px;
+    background-color: black;
+    margin: 70px auto;
+    color:white;
+    padding: 50px;
+    float: center;
+    opacity: 0.7;
+}
+form .login
+{
+    margin: auto 70px ;
+
+}
+input
+{
+    height: 25px;
+    width: 300px;
+
+
+}
+button
+{
+   margin: auto 120px;
+   padding-left: 10px;
+}
+.tab
+{
+    padding-left: 60px;
+    padding-bottom: 50px;
+
+
+}
+/*-----------------------------------registratioin------------------*/
+
+.reg_img
+{
+    height: 650px;
+    margin-top: 0px;
+    background-image:url("images/5.jpg");
+}
+.box2
+{
+    height: 420px;
+    width: 490px;
+    background-color: black;
+    margin: 70px auto;
+    color:white;
+    padding: 50px;
+    padding-top:0px;
+    opacity: 0.8;
+}
+.reg_sec
+{
+}
+.thick
+{
+    font-weight: 900;
+}
+.login input
+{
+    padding-left: 40px;
+}
+.reg_ul
+{
+    padding-top: 10px;
+}
