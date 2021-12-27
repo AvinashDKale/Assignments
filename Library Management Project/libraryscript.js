@@ -1,9 +1,9 @@
 console.log('This is ITSOURCECODE Project');
 class Library {
-    constructor(name, author, type) {
+    constructor(name, author, price) {
         this.name = name;
         this.author = author;
-        this.type = type;
+        this.price = price;
     }
 }
 
@@ -14,13 +14,14 @@ class Display {
         let uiString = `<tr>
                             <td>${bookoflibrary.name}</td>
                             <td>${bookoflibrary.author}</td>
-                            <td>${bookoflibrary.type}</td>
+                            <td>${bookoflibrary.price}</td>
                         </tr>`;
         tableBody.innerHTML += uiString;
     }
 
     clear() {
         let libraryForm = document.getElementById('libraryForm');
+        
         libraryForm.reset();
     }
 
@@ -42,7 +43,7 @@ class Display {
         else{
             boldText = 'Error!';
         }
-        message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+        message.innerHTML = `<div class="alert alert-${price} alert-dismissible fade show" role="alert">
                                 <strong>${boldText}:</strong> ${displayMessage}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">×</span>
@@ -50,7 +51,7 @@ class Display {
                             </div>`;
         setTimeout(function () {
             message.innerHTML = ''
-        }, 5000);
+        }, );
     
     }
 }
@@ -63,22 +64,11 @@ function libraryFormSubmit(e) {
     console.log('YOu have submitted library form');
     let name = document.getElementById('bookName').value;
     let author = document.getElementById('author').value;
-    let type;
-    let philippine = document.getElementById('philippine');
-    let programming = document.getElementById('programming');
-    let science = document.getElementById('science');
-
-    if (philippine.checked) {
-        type = philippine.value;
-    }
-    else if (programming.checked) {
-        type = programming.value;
-    }
-    else if (science.checked) {
-        type = science.value;
-    }
-
-    let bookoflibrary = new Library(name, author, type);
+    let price;
+    
+   
+  
+    let bookoflibrary = new Library(name, author, price);
     console.log(bookoflibrary);
 
     let display = new Display();
