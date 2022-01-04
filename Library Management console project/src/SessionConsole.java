@@ -8,6 +8,7 @@ import java.util.Scanner;
 		 static Library library = new Library();
 		 SessionConsole ses =new SessionConsole();
 		 static Scanner sc =new Scanner(System.in);	
+		 
 		
 		 public static void admin() {
 			 
@@ -79,12 +80,7 @@ public static void student() {
 		}
 	} while(true);
 		 }
-		
-
-
-
-
-
+	
           public static void main(String args[])
 		{ 
 			int choice;

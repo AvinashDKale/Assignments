@@ -116,7 +116,7 @@ section
  height:543px;
     width: 1275px;
     background-color: gray;   
-     background-image:url("images/st.jpg");
+     background-image:url("images/8.jpg");
 }
 footer
 {
@@ -126,26 +126,8 @@ height:90px;
     float: bottom;
 
 }
-li a{
-color: white;
-text-decoration: none;
 
-}
-nav
-{
-    float: right;
-    word-spacing:20px;
-    padding-top: 0px;
-    padding-bottom:10px;
-    padding-right:30px;
 
-}
-nav li
-{
-    display:inline-block;
-    line-height: 15px;
-
-}
 .logo img
 {
     padding-left:120px;
@@ -154,30 +136,11 @@ nav li
 {
     padding-left: 30px;
 }
-section .sec_img
-{  height:543px;
- margin-top: 0px;
-    background-image: url("images/1.jpg");
-}
-.box
-{
-    height:300px;
-    width: 450px;
-    color: white;
-    background-color:transparent;
-    margin:20px auto;
-    padding-left:100px;
-    padding-top: 30px;
 
-}
-.box h1
-{
-    padding: 20px;
-    padding-bottom: 10px;
-}
+
 .firsth1{
     padding-left: 100px;
-    padding:5px;
+    padding:0px;
 }
 footer p
 {
@@ -187,92 +150,8 @@ padding-left: 100px;
  
 }
 
-/*____________________________Student_Login_______________________*/
-.log_img
-{
-    background-image:url("images/st.jpg");
-}
-
-.box1
-{
-    height: 350px;
-    width: 480px;
-    background-color: black;
-    margin: 70px auto;
-    color:white;
-    padding: 50px;
-    float: center;
-    opacity: 0.8;
-}
-form .login
-{
-    margin: auto 70px ;
-
-}
-input
-{
-    height: 25px;
-    width: 300px;
 
 
-}
-button
-{
-   margin: auto 120px;
-   padding-left: 10px;
-}
-.tab
-{
-    padding-left: 60px;
-    padding-bottom: 50px;
-
-
-}
-/*-----------------------------------registratioin------------------*/
-
-.reg_img
-{
-    height: 650px;
-    margin-top: 0px;
-    background-image:url("images/5.jpg");
-}
-.box2
-{
-    height: 420px;
-    width: 490px;
-    background-color: black;
-    margin: 70px auto;
-    color:white;
-    padding: 50px;
-    padding-top:0px;
-    opacity: 0.8;
-}
-.reg_sec
-{
-}
-.thick
-{
-    font-weight: 900;
-}
-.login input
-{
-    padding-left: 40px;
-}
-.reg_ul
-{
-    padding-top: 10px;
-}
-/*----------------------------------------------------Admin Registration-------------------------------------*/
-.admin_log{
-    height: 650px;
-    margin-top: 0px;
-    background-image:url("images/8.jpg");
-}
-
-
-
-
-/*------------------------------------------------Admin page------------------------------------------------*/
 
 .Logout_admin
 {
@@ -280,6 +159,16 @@ button
 }
 .Ad_sec_btn
 {
+    
+    color: black;
+}
+.boxa
+{
+    height: 443px;
+    width: 1000px;
     float: left;
+    padding-left: 200px;
+    background-color: black;
+    margin:20px auto;
     color: black;
 }

@@ -1,9 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin Dashboard</title>
+	<title>Admin Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device=width,initial=scale=1">
 </head>
+
 <body>
+	<div class="wrapper">
+		
+	<header>
+		  <div class="logo"><img src="images/9.png">
+		       
+		  </div>
+         <nav>
+
+	          <ul>
+		            <li><a class="" href="index.html">Log_Out</a></li>
+		            
+	          </ul>
+          </nav>
+          <div class="heading"><h1 style="color: white">LIBRARY MANAGEMENT SYSTEM</h1></div>
+    </header>
+<section>
+<div class="Ad_sec_btn"><br><br><br>
+<button type="button" id="add_book" style="color: white;background-color: transparent;padding-left:0px;float: left;font-size: 18px; ">Add Book</button><br><br><br><br><br>
+<button id="update book" style="color: white;font-size: 18px;background-color: transparent;float: left;">Update Book</button><br><br><br><br><br>
+<button id="delete book" style="color: white;background-color: transparent;font-size: 18px;padding-left:0px;float: left; ">Delete Book</button><br><br><br><br><br>
+<button id="search book" style="color: white;background-color: transparent;padding-left:0px;font-size: 18px;float: left; "> Search Book</button><br><br><br><br><br>
+<button id="view orders" style="color: white;background-color: transparent;padding-left:0px;float: left; font-size: 18px;">View Orders</button><br><br><br>
+</div><br>
+<div class="boxa">
+	<form>
+		<fieldset>
+			<legend style="color: white;font-size: 18px;padding-top: 30px;">Title</legend><br>
+			<input type="text" name="" placeholder="Title"><br>
+			<legend style="color: white;font-size: 18px;">Author</legend><br>
+			<input type="text" name="" placeholder="Author"><br>
+			<legend style="color: white;font-size: 18px;">Price</legend><br>
+			<input type="number" name=""  placeholder="Price">
+
+		</fieldset>
+		
+	</form>
+	<hr>
+	<h4>Books</h4>
+	<table class="table table-bordered table-hover">
+		
+
+
+
+
+
+
+	</table>
+
+<script type="text/javascript">
+	var db=openDatabase("LMS_DB","1.0","LMS_DB",65535);
+	$(function(){
+		$("#add_book").click(function() {
+			db.trasaction(function(trasaction){
+				var sql="CREATE TABLE  Books"+"id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,"+
+				"title VARCHAR(100) NOT NULL,"+
+				"author VARCHAR(100) NOT NULL,"+"price INT(5) NOT NULL";
+				trasaction.executeSql(sql,undefined,function(){
+					alert("Book is Added successfuly");
+				},function(){
+					alert("book is already added");
+				})
+			});
+		});
+
+
+
+
+
+
+
+	})
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</div>
+</section>
 
 </body>
 </html>

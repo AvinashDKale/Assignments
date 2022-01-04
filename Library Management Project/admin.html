@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device=width,initial=scale=1">
-	
+	<script src="adminlogin.js"></script>
 </head>
 <body>
      <header>
@@ -33,9 +33,49 @@
 	   	      <h1 style="text-align:center;font-size:25px;font-family: Lucida Console;">Admin login Form </h1>
  	          <form name="login" action="" method="" >
  	          	<div class="login"><br><br>
-           	     	  <input type="text" name="username" placeholder="Username" required="" style="border-style: none;opacity: 0.8;"><br><br><br>
-	     	          <input type="password" name="password" placeholder="Password" required="" style="border-style: none;opacity: 0.8;"><br><br><br>
-                      <button style="font-size: 20px;">Login</button></div>
+           	     	  <input type="text" name="username" id="username" placeholder="Username" required="" style="border-style: none;opacity: 0.8;"><br><br><br>
+	     	          <input type="password" id="password" name="password" placeholder="Password" required="" style="border-style: none;opacity: 0.8;"><br><br><br>
+                      <input type="button" onclick="window.open('adminbooks.html','_self')" style="height: 22px;width: 100px;padding-right:60px;" value="Login" align="left" >
+                      <script >
+
+
+
+                      	function login() {
+                                             var username = document.getElementById("username").value;
+                                             var password = document.getElementById("password").value;
+  
+
+                                              let submitOk = true;
+                                              let myWindow;
+
+                                             if (username.length == 0) {
+                                                                          alert("Invalid username");
+                                                                           submitOk = false;
+                                                                       }
+
+                                             else if (pass.length < 10 || submitOk == false) 
+                                             {
+                                                alert("Invalid password");
+                                                submitOk = false;
+                                             }
+                                              else  (submitOk == true)
+                                               {
+    
+                                                  myWindow=window.open("E:/github/Assignments/Library Management Project/adminbooks.html");
+                                                } 
+    
+    
+                                         }
+
+                    </script>
+
+
+
+
+
+
+
+                  </div>
 	          </form>
 	          <br>
 	          <p style="color: white;margin: auto 20px;">&nbsp
