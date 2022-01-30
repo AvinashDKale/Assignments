@@ -68,14 +68,17 @@ public class SessionConsole
 					break;
 
 				case 2:
-					student();break;
+					student();
+					break;
 				case 3:
-					library.returnBook();break;
+					library.returnBook();
+					break;
 				case 4:
 					System.exit(1);System.out.println("\n\t\t\t------------------------thank you------------------------");
 				    break;
 				default :
-					System.out.println("\n\t\t\t\t\t\t Invalid Choice !!");break;
+					System.out.println("\n\t\t\t\t\t\t Invalid Choice !!");
+					break;
 			}
 		}
 		while(true);
