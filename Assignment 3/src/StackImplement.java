@@ -25,6 +25,7 @@ class StackImplement
 		if (isFull())
 		{
 			System.out.println("\nStack OverFlow");
+			
 			// terminates the program
 			System.exit(1);
 		}
