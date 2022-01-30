@@ -23,6 +23,7 @@ public class RemoveDuplicateInArray
 		}
 		return j;
 	}
+	
 	public static void main (String[] args)
 	{
 		int ArrySize;
