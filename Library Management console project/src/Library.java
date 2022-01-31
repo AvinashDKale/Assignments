@@ -1,7 +1,9 @@
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Scanner;
-import java.sql.*;
 
 public class Library
 {
@@ -97,20 +99,23 @@ public class Library
 
 	public void showLibrary()
 	{
-		try {Class.forName("com.mysql.jdbc.Driver");
-		java.sql.Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/librarymanegementsystem_db","root","root");
-		Statement st = conn.createStatement();
-		ResultSet rs = st.executeQuery("SELECT * FROM librarymanegementsystem_db.lms_book_details;");
-		rs.next();
-		while(rs.next())
+		try
 		{
-			int bookedition=rs.getInt("BOOK_EDITION");
-			String Bookname = rs.getString("BOOK_TITLE");
-			System.out.println(Bookname+""+bookedition);
+			Class.forName("com.mysql.jdbc.Driver");
+		    java.sql.Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/librarymanegementsystem_db","root","root");
+		    Statement st = conn.createStatement();
+		    ResultSet rs = st.executeQuery("SELECT * FROM librarymanegementsystem_db.lms_book_details;");
+		    rs.next();
+			while(rs.next())
+			{
+				int bookedition=rs.getInt("BOOK_EDITION");
+				String Bookname = rs.getString("BOOK_TITLE");
+				System.out.println(Bookname+""+bookedition);
+			}
+			st.close();
+			conn.close();
 		}
-		st.close();
-		conn.close();
-		}
+
 		catch(Exception exc)
 		{
 			exc.printStackTrace();
