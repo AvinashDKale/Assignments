@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Libraray Management project using spring JPA</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<div class="container my-2">
+		<h1 >Book List</h1>
+		<a th:href="@{/showNewBookForm}" class="btn btn-primary btn-sm mb-3">Add Book</a>
+		<table border="1" class="table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Publication</th>
+					<th>Edition</th>
+				</tr>
+			</thead>
+				<tbody>
+				<tr th:each="Book:${listBooks}">
+					<td th:text="${Book.title}"></td>
+					<td th:text="${Book.author}"></td>
+					<td th:text="${Book.publication}"></td>
+					<td th:text="${Book.edition}"></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+
+</body>
+</html>

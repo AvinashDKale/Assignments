@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Libraray Management System</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<div class="container">
+		<h1 >Library Management Sysytem</h1>
+		<hr>
+		<h2>Save Book</h2>
+		<form action="#" th:action="@{/saveBook}" th:object="${book}",method="POST">
+			<input type="text" th:field="*{title}" placeholder="Book title" class="form-control mb-4 col" name="">
+			<input type="text" th:field="*{author}" placeholder="Book author" class="form-control mb-4 col" name="">
+			<input type="text" th:field="*{publication}" placeholder="publication" class="form-control mb-4 col" name="">
+			<input type="text" th:field="*{edition}" placeholder="Book edition" class="form-control mb-4 col" name="">
+			<button type="submit" class="btn btn-info col-2">Save Book</button>
+		</form>		</div>
+
+</body>
+</html>

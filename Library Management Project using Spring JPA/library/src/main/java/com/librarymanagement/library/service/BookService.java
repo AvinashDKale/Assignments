@@ -7,4 +7,5 @@ public interface BookService {
 	
 
 	List<Book>getAllBooks();
+	void saveBook(Book book);
 }
