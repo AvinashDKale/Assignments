@@ -14,7 +14,7 @@ function login() {
     alert("Invalid password");
     submitOk = false;
   }
-  if (submitOk == true) {
+if (submitOk == true) {
     
       window.open("adminbooks.html");
     } 

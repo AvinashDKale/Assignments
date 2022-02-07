@@ -1,4 +1,4 @@
-console.log('This is ITSOURCECODE Project');
+console.log('This is Library management  Project');
 class Library {
     constructor(name, author, price) {
         this.name = name;
