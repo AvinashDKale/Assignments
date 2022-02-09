@@ -17,7 +17,9 @@ public class BookController {
 	@Autowired
 	private BookService bookservice;
 	
+	
 	@GetMapping("/")
+	
 	public String viewHomePage(Model model){
 		
 		model.addAttribute("listBooks",bookservice.getAllBooks());
