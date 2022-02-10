@@ -25,7 +25,10 @@
 			<input type="text" th:field="*{publication}" placeholder="publication" class="form-control mb-4 col" name="">
 			<input type="text" th:field="*{edition}" placeholder="Book edition" class="form-control mb-4 col" name="">
 			<button type="submit" class="btn btn-info col-2">Save Book</button>
-		</form>		</div>
+		</form>	
+		<hr>
+		
+		<a th:href = "@{/}"> Back to Book List</a>	</div>
 
 </body>
 </html>

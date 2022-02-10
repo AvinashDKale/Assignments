@@ -13,18 +13,20 @@ public class Book
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	private long id;
 	
-	@Column(name="Title")
+	@Column(name="title")
+	
 	private String title;
 	
-	@Column(name="Author")
+	@Column(name="author")
 	private String author;
 	
-	@Column(name="Publication")
+	@Column(name="publication")
 	private String publication;
 	
-	@Column(name="Edition")
+	@Column(name="edition")
 	private String edition;
 	public long getId() {
 		return id;
