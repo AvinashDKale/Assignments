@@ -23,10 +23,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springWeb2.entity.BookDao;
+import com.springWeb2.entity.IssuedBookDao;
 import com.springWeb2.service.LibraryServiceImpl;
 
 @Controller
-public class HomeController {
+public class HomeController { 
 
     @Autowired
     private LibraryServiceImpl libraryServiceImpl;
@@ -66,7 +67,7 @@ public class HomeController {
         libraryServiceImpl.saveBook(book);
         return "redirect:/";
     }
-
+    
     @GetMapping("/showFormForUpdate/{id}")
     public String showFormForUpdate(@PathVariable int id, Model model) {
         BookDao book = libraryServiceImpl.getBookById(id);
@@ -79,4 +80,6 @@ public class HomeController {
         this.libraryServiceImpl.deleteBook(id);
         return "redirect:/";
     }
+    
+   
 }
