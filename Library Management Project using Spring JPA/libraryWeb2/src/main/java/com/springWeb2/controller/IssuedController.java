@@ -2,6 +2,7 @@ package com.springWeb2.controller;
 
 import java.time.LocalDate;
 import java.util.Calendar;
+import java.io.FileNotFoundException;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
@@ -15,6 +16,9 @@ import com.springWeb2.entity.BookDao;
 import com.springWeb2.entity.IssuedBookDao;
 import com.springWeb2.service.IssuedServiceImpl;
 import com.springWeb2.service.LibraryServiceImpl;
+import com.springWeb2.service.ReportService;
+
+import net.sf.jasperreports.engine.JRException;
 
 @Controller
 public class IssuedController {
@@ -24,6 +28,9 @@ public class IssuedController {
 
     @Autowired
     private LibraryServiceImpl libraryServiceImpl;
+    
+    @Autowired
+    private ReportService service;
     
     @GetMapping("/addIssuedBook/{id}")
     public String addIssuedBook(@PathVariable int id) {
@@ -51,5 +58,11 @@ public class IssuedController {
         libraryServiceImpl.saveBook(book);
         this.issuedServiceImpl.deleteBook(id);
         return "redirect:/showIssuedBooks";
+    }
+    
+    @GetMapping("/report")
+    public String generateReport( ) throws FileNotFoundException, JRException {
+        
+        return service.exportReport();
     }
 }
