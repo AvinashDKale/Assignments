@@ -1,8 +1,15 @@
 package com.springWeb2.service;
 
-import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
-import net.sf.jasperreports.engine.design.JasperDesign;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
@@ -10,11 +17,17 @@ import org.springframework.util.ResourceUtils;
 import com.springWeb2.entity.IssuedBookDao;
 import com.springWeb2.repository.IssuedRepository;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.export.SimpleExporterInput;
+import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
+import net.sf.jasperreports.export.SimplePdfReportConfiguration;
 
 @Service
 public class ReportService {
@@ -39,10 +52,10 @@ public class ReportService {
 //        return "report generated in path : " + "D:\\Report";
 //    }
     
-    public String exportReport() throws FileNotFoundException, JRException {
+    public void exportReport(HttpServletResponse response) throws JRException, IOException {
         String path = "D:\\Report";
         Map<String, Object> parameters = new HashMap<>();
-        parameters.put("studentName", "avinash");
+        parameters.put("reportName", "avinash");
 
         List<IssuedBookDao> IBooks = repository.findAll();
         File file = ResourceUtils.getFile("classpath:report11.jrxml");
@@ -51,6 +64,16 @@ public class ReportService {
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
         JasperExportManager.exportReportToPdfFile(jasperPrint, "D:\\Report\\report11.pdf");
         System.out.println("Report created...");
-        return "file is created on D:\\Report";
+        StringBuilder fileArg = new StringBuilder("attchment" + "; filename=");
+        fileArg.append("report.pdf");
+        
+                        response.setContentType("application/x-download");
+                        response.addHeader("Content-Disposition", fileArg.toString());
+
+        JRPdfExporter exporter = new JRPdfExporter();
+                OutputStream out = response.getOutputStream();
+                exporter.setExporterInput(new SimpleExporterInput(jasperPrint));
+                exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(out));
+                SimplePdfReportConfiguration reportCon;
         }
 }

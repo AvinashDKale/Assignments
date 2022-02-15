@@ -1,10 +1,9 @@
 package com.springWeb2.controller;
 
+import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.io.FileNotFoundException;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
+
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -61,8 +60,8 @@ public class IssuedController {
     }
     
     @GetMapping("/report")
-    public String generateReport( ) throws FileNotFoundException, JRException {
+    public void generateReport(HttpServletResponse response ) throws JRException, IOException {
         
-        return service.exportReport();
+        service.exportReport(response);
     }
 }
