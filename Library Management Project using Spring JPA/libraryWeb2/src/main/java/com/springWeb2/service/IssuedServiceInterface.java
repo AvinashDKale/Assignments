@@ -14,5 +14,6 @@ public interface IssuedServiceInterface {
     void saveBook(IssuedBookDao book);
 
     void deleteBook(int id);
+  //  List<IssuedBookDao>getData_between();
 
 }

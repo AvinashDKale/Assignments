@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
     @Entity
     @Table(name = "issued_books_table")
     public class IssuedBookDao {
@@ -26,7 +28,7 @@ import javax.persistence.Table;
         private LocalDate issued_date;
         @Column(name = "Return_date")
         private LocalDate return_date;
-
+        
         public IssuedBookDao() {
             super();
         }
@@ -41,12 +43,7 @@ import javax.persistence.Table;
             this.return_date = return_date;
         }
 
-        public IssuedBookDao(int id2, String title2, String author2, double cost2) {
-            this.id = id;
-            this.title = title;
-            this.author = author;
-            this.cost = cost;
-        }
+        
 
         public int getId() {
             return id;

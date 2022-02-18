@@ -28,5 +28,11 @@ public class IssuedServiceImpl implements IssuedServiceInterface {
     public void deleteBook(int id) {
         IssuedRepo.deleteById(id);        
     }
+
+//    @Override
+//    public List<IssuedBookDao> getData_between() {
+//        
+//        return IssuedRepo.getData_between(null, null);
+//    }
     
 }
