@@ -74,7 +74,7 @@
 		</band>
 	</title>
 	<columnHeader>
-		<band height="94" splitType="Stretch">
+		<band height="89" splitType="Stretch">
 			<staticText>
 				<reportElement mode="Opaque" x="1" y="30" width="79" height="59" backcolor="#BEC4E8" uuid="385f6ed7-17fa-4955-a0a4-554933021864">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
@@ -138,7 +138,7 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="49" splitType="Stretch">
+		<band height="44" splitType="Stretch">
 			<textField isBlankWhenNull="true">
 				<reportElement mode="Opaque" x="1" y="0" width="79" height="44" backcolor="#F5F7F7" uuid="c700d6e4-94aa-42d3-8c0f-b76777caf51b">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
@@ -188,7 +188,7 @@
 				<textFieldExpression><![CDATA[$F{return_date}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement mode="Opaque" x="358" y="1" width="101" height="44" backcolor="#F5F7F7" uuid="ab58f06d-ecbb-4eaa-bf6c-d02c3f021ea6">
+				<reportElement mode="Opaque" x="358" y="0" width="101" height="44" backcolor="#F5F7F7" uuid="21a7b161-46e1-4529-b35f-886dfa9154f4">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>

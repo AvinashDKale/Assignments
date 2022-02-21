@@ -12,23 +12,26 @@
 	<div class="container">
 		<h1>Report</h1>
 		<hr />
-		<form action="#" th:action="@{/reportPage}" 
-			method="POST">
-			
+		<form action="#" th:action="@{/reportPage}" method="POST">
+
 			<!--  <label>Start Date</label>
 			 <input type="date" th:name="startDate"/>
 			 <label>End Date</label>
 			  <input type="date" th:name="endDate"/> -->
-			 <label>Report Name</label><input type="text" name="reportName"class="form-control mb-4 col-4" />
-			 <label>Start Date</label><input type="date" name="startDate"class="form-control mb-4 col-4" />
-
-			<label>End Date</label><input type="date" name="endDate" class="form-control mb-4 col-4" /> 
-			<br />
+			<label>Report Name</label><input type="text" name="reportName"
+				class="form-control mb-4 col-4" /> <label>Start Date</label><input
+				type="date" name="startDate" class="form-control mb-4 col-4" /> <label>End
+				Date</label><input type="date" name="endDate"
+				class="form-control mb-4 col-4" /> <br />
 			<button class="btn btn-success" type="Submit" value="Submit">Download
 				Report</button>
+
+
 		</form>
 		<hr />
-		<a th:href="@{/}">Back to Library</a>
+		<a th:href="@{/}">Back to Library</a> <a th:href="@{/csvReport}"
+			class="btn btn-primary btn-sm mb-3">CSV Report</a>
+
 	</div>
 </body>
 </html>
