@@ -16,16 +16,22 @@ public class BookDao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Book_id")
     private int id;
+    
     @Column(name = "Title")
     private String title;
+    
     @Column(name = "Author")
     private String author;
+    
     @Column(name = "Cost")
     private double cost;
+    
     @Column(name = "Quantity")
     private int quantity;
+    
     @Column(name = "Status")
     private String status;
+    
     
     public BookDao() {
         super();

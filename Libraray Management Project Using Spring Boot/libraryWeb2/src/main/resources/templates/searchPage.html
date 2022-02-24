@@ -20,7 +20,8 @@
 			<input type="text" name="keyword" th:value="${keyword}"
 				placeholder="Search a Book..." size="50">
 			<button type="submit" class="btn btn-info">Search</button>
-			<button type="reset" class="btn btn-info">Reset</button>
+			<a th:href="@{/searchBook}" class="btn btn-primary float-right">Reset</a>
+			
 		</form>
 		<br>
 		<br>
