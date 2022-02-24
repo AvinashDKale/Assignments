@@ -17,6 +17,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.opencsv.exceptions.CsvDataTypeMismatchException;
+import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import com.springWeb2.entity.BookDao;
 import com.springWeb2.entity.IssuedBookDao;
 import com.springWeb2.service.IssuedServiceImpl;
@@ -72,9 +75,10 @@ public class IssuedController {
     @PostMapping("/report")
     public void generateAdvanceReport(@RequestParam(value = "reportName") String reportName,
             @RequestParam(value = "startDate") String startDate, @RequestParam(value = "endDate") String endDate,
-            HttpServletResponse response) throws JRException, IOException {
+            @RequestParam(value = "button") String field, HttpServletResponse response)
+            throws JRException, IOException, CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
         System.out.println(startDate + endDate);
-        reportService.exportAdvanceReport(response, startDate, endDate, reportName);
+        reportService.exportAdvanceReport(response, startDate, endDate, reportName, field);
     }
     
 }

@@ -15,15 +15,24 @@ public class IssuedBookDao {
     @Id
     @Column(name = "Book_id")
     private int id;
+    
     @Column(name = "Title")
+    @CsvBindByName(column ="Title")
     private String title;
+    
     @Column(name = "Author")
+    @CsvBindByName(column ="Author")
     private String author;
+    
     @Column(name = "Cost")
     private double cost;
+    
     @Column(name = "Issued_date")
+    @CsvBindByName(column ="Issued Date")
     private LocalDate issued_date;
+    
     @Column(name = "Return_date")
+    @CsvBindByName(column ="Return Date")
     private LocalDate return_date;
     
     public IssuedBookDao() {
