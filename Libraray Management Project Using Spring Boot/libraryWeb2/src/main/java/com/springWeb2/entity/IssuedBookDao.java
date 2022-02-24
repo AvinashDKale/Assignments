@@ -1,5 +1,7 @@
 package com.springWeb2.entity;
 
+import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
