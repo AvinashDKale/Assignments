@@ -35,16 +35,16 @@
 					<td th:text="${book.issued_date}"></td>
 					<td th:text="${book.return_date}"></td>
 					<td align=center><a
-						th:href="@{/deleteIssuedBook/{id}(id=${book.id})}"
+						th:href="@{/issuedbook/delete/{id}(id=${book.id})}"
 						class="btn btn-danger">Return</a>
 				</tr>
 			</tbody>
 		</table>
 		<hr>
-		<a th:href="@{/}">Back to Library</a> <a th:href="@{/report}"
+		<a th:href="@{/}">Back to Library</a> <a th:href="@{/issuedbook/report}"
 			class="btn btn-primary">Generate Report</a> <a
-			th:href="@{/reportInput}" class="btn btn-primary">Generate
-			Advance Report</a> <a th:href="@{/csvReport}" class="btn btn-primary">Generate
+			th:href="@{/report/input}" class="btn btn-primary">Generate
+			Advance Report</a> <a th:href="@{/report/csv}" class="btn btn-primary">Generate
 			 CSV Report</a>
 	</div>
 </body>

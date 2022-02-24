@@ -23,14 +23,14 @@ public class TymleafController {
         return "index";
     }
     
-    @GetMapping(value = "/showNewBookForm")
+    @GetMapping(value = "/book/add")
     public String addBookForm(Model model) {
         BookDao book = new BookDao();
         model.addAttribute("book", book);
         return "new_book";
     }
     
-    @GetMapping(value = "/showSearchBookForm")
+    @GetMapping(value = "/book/search")
     public String searchBookForm() {
         
         return "searchPage";
@@ -46,20 +46,20 @@ public class TymleafController {
         return "searchPage";
     }
     
-    @PostMapping(value = "/saveBook")
+    @PostMapping(value = "/book/save")
     public String saveBook(@ModelAttribute("book") BookDao book) {
         libraryServiceImpl.saveBook(book);
         return "redirect:/";
     }
     
-    @GetMapping("/showFormForUpdate/{id}")
+    @GetMapping("/book/update/{id}")
     public String showFormForUpdate(@PathVariable int id, Model model) {
         BookDao book = libraryServiceImpl.getBookById(id);
         model.addAttribute("book", book);
         return "update_book";
     }
     
-    @GetMapping("/deleteBook/{id}")
+    @GetMapping("/book/delete/{id}")
     public String deleteBook(@PathVariable(value = "id") int id) {
         this.libraryServiceImpl.deleteBook(id);
         return "redirect:/";

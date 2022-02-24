@@ -13,7 +13,7 @@
 		<h1>Library Management System</h1>
 		<hr>
 		<h2>Update Book</h2>
-		<form action="#" th:action="@{/saveBook}" th:object="${book}"
+		<form action="#" th:action="@{/book/save}" th:object="${book}"
 			method="POST">
 
 			<label>Book Id</label> <input type="text" th:field="*{id}"

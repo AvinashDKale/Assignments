@@ -12,10 +12,10 @@
 <body>
 
 	<div class="container my-2">
-		<br> <a th:href="@{/showNewBookForm}"
+		<br> <a th:href="@{/book/add}"
 			class="btn btn-primary btn-sm mb-3">Add Book</a> <a
-			th:href="@{/showSearchBookForm}" class="btn btn-primary btn-sm mb-3">Search</a>
-		<a th:href="@{/showIssuedBooks}" class="btn btn-primary btn-sm mb-3">Issued
+			th:href="@{/book/search}" class="btn btn-primary btn-sm mb-3">Search</a>
+		<a th:href="@{/issuedbook/get/all}" class="btn btn-primary btn-sm mb-3">Issued
 			Books</a>
 		<h1 align=center>Library Management System</h1>
 		<hr>
@@ -42,11 +42,11 @@
 					<td th:text="${book.status}">Status</td>
 
 					<td align=center><a
-						th:href="@{/showFormForUpdate/{id}(id=${book.id})}"
+						th:href="@{/book/update/{id}(id=${book.id})}"
 						class="btn btn-primary">Update</a> <a
-						th:href="@{/deleteBook/{id}(id=${book.id})}"
+						th:href="@{/book/delete/{id}(id=${book.id})}"
 						class="btn btn-danger">Delete</a> <a
-						th:href="@{/addIssuedBook/{id}(id=${book.id})}"
+						th:href="@{issuedbook/add/{id}(id=${book.id})}"
 						class="btn btn-primary">Issue</a></td>
 				</tr>
 			</tbody>

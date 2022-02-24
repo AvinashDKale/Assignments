@@ -12,7 +12,7 @@
 	<div class="container">
 		<h1>Report</h1>
 		<hr />
-		<form action="#" th:action="@{/reportPage}" method="POST">
+		<form action="#" th:action="@{/report/advance}" method="POST">
 
 			<!--  <label>Start Date</label>
 			 <input type="date" th:name="startDate"/>
@@ -29,7 +29,7 @@
 
 		</form>
 		<hr />
-		<a th:href="@{/}">Back to Library</a> <a th:href="@{/csvReport}"
+		<a th:href="@{/}">Back to Library</a> <a th:href="@{/report/csv}"
 			class="btn btn-primary btn-sm mb-3">CSV Report</a>
 
 	</div>

@@ -19,7 +19,7 @@ public class TymleafIssueController {
     @Autowired
     private LibraryServiceImpl libraryServiceImpl;
     
-    @GetMapping("/addIssuedBook/{id}")
+    @GetMapping("issuedbook/add/{id}")
     public String addIssuedBook(@PathVariable int id) {
         BookDao book = libraryServiceImpl.getBookById(id);
         LocalDate date = LocalDate.now();
@@ -31,18 +31,18 @@ public class TymleafIssueController {
         return "redirect:/";
     }
     
-    @GetMapping("/showIssuedBooks")
+    @GetMapping("/issuedbook/get/all")
     public String showIssuedBooks(Model model) {
         model.addAttribute("listBooks", issuedServiceImpl.findAllBooks());
         return "issued_books";
     }
     
-    @GetMapping("/deleteIssuedBook/{id}")
+    @GetMapping("/issuedbook/delete/{id}")
     public String deleteIssuedBook(@PathVariable(value = "id") int id) {
         BookDao book = libraryServiceImpl.getBookById(id);
         book.setStatus("not issued");
         libraryServiceImpl.saveBook(book);
         this.issuedServiceImpl.deleteBook(id);
-        return "redirect:/showIssuedBooks";
+        return "redirect:/issuedbook/get/all";
     }
 }

@@ -26,19 +26,19 @@ public class ReportController {
     @Autowired
     private IssuedServiceImpl issuedService;
     
-    @GetMapping("/report")
+    @GetMapping("/issuedbook/report")
     public void generateReport(HttpServletResponse response) throws JRException, IOException {
         reportService.exportReport(response);
     }
     
-    @GetMapping(value = "/reportInput")
+    @GetMapping(value = "/report/input")
     public String reportInput(Model model) {
         IssuedBookDao book = new IssuedBookDao();
         model.addAttribute("book", book);
         return "reportInput";
     }
     
-    @PostMapping("/reportPage")
+    @PostMapping("/report/advance")
     public void generateAdvanceReport(@RequestParam(value = "reportName") String reportName,
             @RequestParam(value = "startDate") String startDate, @RequestParam(value = "endDate") String endDate,
             HttpServletResponse response) throws JRException, IOException {
@@ -54,7 +54,7 @@ public class ReportController {
 //        reportService.exportToCSV(response, startDate, endDate, reportName);
 //    }    
     
-    @GetMapping("/csvReport")
+    @GetMapping("/report/csv")
     public void exportCSV(HttpServletResponse response) throws Exception {
         
         String filename = "report.csv";
