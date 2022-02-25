@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.springWeb2.entity.BookDao;
+import com.springWeb2.entity.TotalBooks;
+import com.springWeb2.repository.TotalBooksRepository;
 import com.springWeb2.service.LibraryServiceImpl;
 
 @Controller
@@ -16,6 +18,9 @@ public class TymleafController {
     
     @Autowired
     private LibraryServiceImpl libraryServiceImpl;
+    
+    @Autowired
+    TotalBooksRepository totalbook;
     
     @GetMapping(value = "/")
     public String viewHomePage(Model model) {
@@ -46,10 +51,17 @@ public class TymleafController {
         return "searchPage";
     }
     
+    @SuppressWarnings("null")
     @PostMapping(value = "/book/save")
     public String saveBook(@ModelAttribute("book") BookDao book) {
-       
+       book.setStatus("not issued");
         libraryServiceImpl.saveBook(book);
+       TotalBooks total =new TotalBooks();
+       total.setId(book.getId());
+        total.setTitle(book.getTitle());
+        total.setTotalBooks(book.getQuantity());
+        totalbook.save(total);
+        
         return "redirect:/";
     }
     
@@ -63,6 +75,7 @@ public class TymleafController {
     @GetMapping("/book/delete/{id}")
     public String deleteBook(@PathVariable(value = "id") int id) {
         this.libraryServiceImpl.deleteBook(id);
+        this.totalbook.deleteById(id);
         return "redirect:/";
     }
 }
