@@ -1,17 +1,23 @@
 package com.springWeb2.entity;
 
+import java.io.IOException;
+import java.io.OutputStream;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.springframework.core.serializer.Serializer;
+
 import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvBindByPosition;
 
 @Entity
 @Table(name = "library_table")
-public class BookDao {
+public class BookDao implements Serializer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Book_id")
@@ -99,6 +105,12 @@ public class BookDao {
     public String toString() {
         return "BookDao [id=" + id + ", title=" + title + ", author=" + author + ", cost=" + cost + ", quantity="
                 + quantity + ", status=" + status + "]";
+    }
+
+    @Override
+    public void serialize(Object object, OutputStream outputStream) throws IOException {
+        // TODO Auto-generated method stub
+        
     }
     
 }

@@ -31,7 +31,7 @@
 					<th>Issued Date</th>
 					<th>Return Date</th>
 					<th>Issued By</th>
-					<th>Actions</th>
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -43,9 +43,7 @@
 					<td th:text="${book.issued_date}"></td>
 					<td th:text="${book.return_date}"></td>
 					<td th:text="${book.issued_by}"></td>
-					<td align=center><a
-						th:href="@{/issuedbook/delete/{id}(id=${book.id})}"
-						class="btn btn-danger">Return</a>
+					
 				</tr>
 			</tbody>
 		</table>

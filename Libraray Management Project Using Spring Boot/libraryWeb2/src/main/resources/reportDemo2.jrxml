@@ -38,28 +38,28 @@
 			<staticText>
 				<reportElement x="10" y="60" width="110" height="19" uuid="d40ecd93-5bc4-4e22-be86-1aaf0429df6a"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="11"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<text><![CDATA[Report Name :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="10" y="98" width="110" height="19" uuid="da8848b6-7c78-4734-a845-709aa53c8d1b"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="11"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<text><![CDATA[Report Period :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="10" y="130" width="110" height="19" uuid="abd43d4e-8dbe-42bc-bec5-2db0868efad6"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="11"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<text><![CDATA[No. of Issued Books :]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="144" y="60" width="406" height="19" uuid="27ef65d4-e083-4bce-bd12-53514efdb660"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="11"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{reportName}]]></textFieldExpression>
 			</textField>
@@ -73,21 +73,21 @@
 			<textField>
 				<reportElement x="145" y="101" width="75" height="19" uuid="4a64714e-8c2c-4dfa-8ae7-8d407864feb7"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="11"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{startDate}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="243" y="101" width="120" height="19" uuid="51c26256-5c09-42a4-b973-d15d687618de"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="11"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{endDate}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="144" y="129" width="177" height="19" uuid="39075c5c-b9c7-4b79-bed0-f6eb02af7129"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="11"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{count}]]></textFieldExpression>
 			</textField>
@@ -96,126 +96,127 @@
 	<columnHeader>
 		<band height="89" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="1" y="30" width="79" height="59" backcolor="#BEC4E8" uuid="385f6ed7-17fa-4955-a0a4-554933021864">
+				<reportElement mode="Opaque" x="1" y="30" width="153" height="59" backcolor="#BEC4E8" uuid="385f6ed7-17fa-4955-a0a4-554933021864">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.75"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Title]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="80" y="30" width="107" height="59" backcolor="#BEC4E8" uuid="be6446f6-fd20-498c-ad5c-57a2989696a9">
+				<reportElement mode="Opaque" x="154" y="30" width="163" height="59" backcolor="#BEC4E8" uuid="be6446f6-fd20-498c-ad5c-57a2989696a9">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.75"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Author]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="181" y="30" width="76" height="59" backcolor="#BEC4E8" uuid="2d07c129-f101-4300-aadf-41029c5d2890">
+				<reportElement mode="Opaque" x="317" y="30" width="130" height="59" backcolor="#BEC4E8" uuid="2d07c129-f101-4300-aadf-41029c5d2890">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.75"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Issued Date]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="257" y="30" width="101" height="59" backcolor="#BEC4E8" uuid="e89b3f6e-2e21-4ec0-ae5f-550ed9e2e5ab">
+				<reportElement mode="Opaque" x="447" y="30" width="148" height="59" backcolor="#BEC4E8" uuid="e89b3f6e-2e21-4ec0-ae5f-550ed9e2e5ab">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.75"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Return Date]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="358" y="30" width="101" height="59" backcolor="#BEC4E8" uuid="f344d15e-e558-40a4-b500-afb69fc1a149">
+				<reportElement mode="Opaque" x="595" y="30" width="128" height="59" backcolor="#BEC4E8" uuid="f344d15e-e558-40a4-b500-afb69fc1a149">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.75"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="8" isBold="true"/>
+					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Issued By]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="44" splitType="Stretch">
+		<band height="50" splitType="Stretch">
 			<textField isBlankWhenNull="true">
-				<reportElement mode="Opaque" x="1" y="0" width="79" height="44" backcolor="#F5F7F7" uuid="c700d6e4-94aa-42d3-8c0f-b76777caf51b">
+				<reportElement mode="Opaque" x="1" y="0" width="153" height="50" backcolor="#F5F7F7" uuid="c700d6e4-94aa-42d3-8c0f-b76777caf51b">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="7"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement mode="Opaque" x="80" y="0" width="101" height="44" backcolor="#F5F7F7" uuid="a8624290-7132-40ae-96fa-cb0e7bd045d9">
+				<reportElement mode="Opaque" x="154" y="0" width="163" height="50" backcolor="#F5F7F7" uuid="a8624290-7132-40ae-96fa-cb0e7bd045d9">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="7"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{author}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement mode="Opaque" x="181" y="0" width="79" height="44" backcolor="#F5F7F7" uuid="29ccf989-bc76-4838-bdaa-d674e4516610">
+				<reportElement mode="Opaque" x="317" y="0" width="130" height="50" backcolor="#F5F7F7" uuid="29ccf989-bc76-4838-bdaa-d674e4516610">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="7"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{issued_date}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement mode="Opaque" x="257" y="0" width="101" height="44" backcolor="#F5F7F7" uuid="dd6f6a4d-0d4d-4cea-b21e-291bfbd75edd">
+				<reportElement mode="Opaque" x="447" y="0" width="148" height="50" backcolor="#F5F7F7" uuid="dd6f6a4d-0d4d-4cea-b21e-291bfbd75edd">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="7"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{return_date}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement mode="Opaque" x="358" y="0" width="101" height="44" backcolor="#F5F7F7" uuid="11f6c90a-1420-4bc8-8f15-d73aeb221e1d">
+				<reportElement mode="Opaque" x="595" y="0" width="128" height="50" backcolor="#F5F7F7" uuid="11f6c90a-1420-4bc8-8f15-d73aeb221e1d">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b8ce199a-3676-4a61-bc1f-79d1ccffee6b"/>
 				</reportElement>
 				<box>
 					<pen lineWidth="0.25"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="SansSerif" size="7"/>
+					<font fontName="SansSerif" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{issued_by}]]></textFieldExpression>
 			</textField>

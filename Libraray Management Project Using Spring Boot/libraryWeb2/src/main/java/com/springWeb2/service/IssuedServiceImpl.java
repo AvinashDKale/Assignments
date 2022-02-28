@@ -27,5 +27,6 @@ public class IssuedServiceImpl implements IssuedServiceInterface {
     @Override
     public void deleteBook(int id) {
         IssuedRepo.deleteById(id);
+       
     }
 }

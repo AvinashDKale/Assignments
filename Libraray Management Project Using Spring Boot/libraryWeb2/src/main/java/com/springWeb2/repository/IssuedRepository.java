@@ -20,4 +20,7 @@ public interface IssuedRepository extends JpaRepository<IssuedBookDao, Integer>{
 
  // public List<IssuedBookDao> findByIssued_dateBetween( LocalDate
  // startDate,LocalDate endDate);
+    
+//    @Query(nativeQuery = true,value="SELECT * FROM library_schema.issued_books_table where issued_books_table.Issued_for=Issued_for")
+   List<IssuedBookDao> findByIssuedFor(String issued_for);
 }
