@@ -23,7 +23,8 @@ public class TotalBooksServiceImpl implements TotalBooksServiceInterface {
         totalbooks.deleteById(id);
         
     }
-    public TotalBooks  getBooksById(int id) {
+    
+    public TotalBooks getBooksById(int id) {
         return totalbooks.findById(id).get();
     }
     

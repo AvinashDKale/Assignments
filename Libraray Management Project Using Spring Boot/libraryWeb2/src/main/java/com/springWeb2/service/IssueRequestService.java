@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.springWeb2.entity.IssueRequest;
-import com.springWeb2.entity.IssuedBookDao;
 import com.springWeb2.repository.IssueRequestRepository;
 
 @Service
@@ -31,7 +30,7 @@ public class IssueRequestService implements IssueRequestServiceInerface {
         this.issuerequestrepo.deleteById(id);
         
     }
-
+    
     public IssueRequest getReuqestById(int id) {
         return issuerequestrepo.findById(id).get();
         

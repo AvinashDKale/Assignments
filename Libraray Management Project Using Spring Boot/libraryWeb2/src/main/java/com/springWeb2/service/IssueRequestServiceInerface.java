@@ -9,9 +9,9 @@ public interface IssueRequestServiceInerface {
     void saveRequest(IssueRequest issuerequest);
     
     void deleteRequest(int id);
-
+    
     List<IssueRequest> findAllRequests();
-
+    
     IssueRequest getReuqestById(int id);
     
 }

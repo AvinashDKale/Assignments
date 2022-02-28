@@ -38,7 +38,6 @@ public class BookDao implements Serializer {
     @Column(name = "Status")
     private String status;
     
-    
     public BookDao() {
         super();
     }
@@ -106,7 +105,7 @@ public class BookDao implements Serializer {
         return "BookDao [id=" + id + ", title=" + title + ", author=" + author + ", cost=" + cost + ", quantity="
                 + quantity + ", status=" + status + "]";
     }
-
+    
     @Override
     public void serialize(Object object, OutputStream outputStream) throws IOException {
         // TODO Auto-generated method stub

@@ -15,34 +15,34 @@ public class IssueRequest {
     
     @Column(name = "Issued_for")
     private String issued_for;
-
+    
     public IssueRequest() {
         super();
         // TODO Auto-generated constructor stub
     }
-
+    
     public IssueRequest(int id, String issued_for) {
         super();
         this.id = id;
         this.issued_for = issued_for;
     }
-
+    
     public int getId() {
         return id;
     }
-
+    
     public String getIssued_for() {
         return issued_for;
     }
-
+    
     public void setId(int id) {
         this.id = id;
     }
-
+    
     public void setIssued_for(String issued_for) {
         this.issued_for = issued_for;
     }
-
+    
     @Override
     public String toString() {
         return "IssueRequest [id=" + id + ", issued_for=" + issued_for + "]";

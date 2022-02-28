@@ -36,15 +36,15 @@ public class IssuedBookDao {
     
     @Column(name = "Issued_by")
     private String issued_by;
-   
+    
     @Column(name = "Issued_for")
     private String issuedFor;
-
+    
     public IssuedBookDao() {
         super();
         // TODO Auto-generated constructor stub
     }
-
+    
     public IssuedBookDao(int id, String title, String author, double cost, LocalDate issued_date, LocalDate return_date,
             String issued_by, String issued_for) {
         super();
@@ -57,78 +57,76 @@ public class IssuedBookDao {
         this.issued_by = issued_by;
         this.issuedFor = issued_for;
     }
-
+    
     public int getId() {
         return id;
     }
-
+    
     public String getTitle() {
         return title;
     }
-
+    
     public String getAuthor() {
         return author;
     }
-
+    
     public double getCost() {
         return cost;
     }
-
+    
     public LocalDate getIssued_date() {
         return issued_date;
     }
-
+    
     public LocalDate getReturn_date() {
         return return_date;
     }
-
+    
     public String getIssued_by() {
         return issued_by;
     }
-
+    
     public String getIssued_for() {
         return issuedFor;
     }
-
+    
     public void setId(int id) {
         this.id = id;
     }
-
+    
     public void setTitle(String title) {
         this.title = title;
     }
-
+    
     public void setAuthor(String author) {
         this.author = author;
     }
-
+    
     public void setCost(double cost) {
         this.cost = cost;
     }
-
+    
     public void setIssued_date(LocalDate issued_date) {
         this.issued_date = issued_date;
     }
-
+    
     public void setReturn_date(LocalDate return_date) {
         this.return_date = return_date;
     }
-
+    
     public void setIssued_by(String issued_by) {
         this.issued_by = issued_by;
     }
-
+    
     public void setIssued_for(String issued_for) {
         this.issuedFor = issued_for;
     }
-
+    
     @Override
     public String toString() {
         return "IssuedBookDao [id=" + id + ", title=" + title + ", author=" + author + ", cost=" + cost
                 + ", issued_date=" + issued_date + ", return_date=" + return_date + ", issued_by=" + issued_by
                 + ", issued_for=" + issuedFor + "]";
     }
-    
-   
     
 }

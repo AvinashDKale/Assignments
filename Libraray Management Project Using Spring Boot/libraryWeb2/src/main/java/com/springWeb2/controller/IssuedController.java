@@ -7,10 +7,6 @@ import java.util.List;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -66,7 +62,6 @@ public class IssuedController {
     public BookDao deleteBook(@PathVariable int id) {
         issuedService.deleteBook(id);
         BookDao book = libraryServiceImpl.getBookById(id);
-        String bookName = book.getTitle();
         book.setStatus("not issued");
         libraryServiceImpl.saveBook(book);
         return book;

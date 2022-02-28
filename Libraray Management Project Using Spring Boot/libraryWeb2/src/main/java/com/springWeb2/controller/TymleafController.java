@@ -1,9 +1,7 @@
 package com.springWeb2.controller;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -53,27 +51,23 @@ public class TymleafController {
             Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
             String username = ((UserDetails) principal).getUsername();
             List<IssuedBookDao> rawList = issuedrepository.findByIssuedFor(username);
-            List<IssuedBookDao> mainList = new ArrayList<IssuedBookDao>();
-            List<Messege> msges = new ArrayList<Messege>();
-            LocalDate date = LocalDate.now();
-            // Period period = Period.between(LocalDate.now(), );
+            
             int count = 0;
             String msgst = "";
             for (IssuedBookDao book : rawList) {
                 Messege msg = new Messege();
                 LocalDate tempDate = book.getReturn_date();
-                Period period = Period.between(LocalDate.now(), tempDate);
                 int p2 = (int) ChronoUnit.DAYS.between(LocalDate.now(), tempDate);
-               if(p2<=10) {
-                String dys = String.valueOf(p2);
-                count = count + 1;
-                msgst = msgst + "remaining  " + dys + " days to return ' " + book.getTitle() + " ' book  ";
-                StringBuilder sb = new StringBuilder(128);
                 
-                msg.setContent(msgst);
-                System.out.println(sb.toString());
-                session.setAttribute("messege", msg);
-               }
+                if (p2 <= 10) {
+                    String dys = String.valueOf(p2);
+                    count = count + 1;
+                    msgst = msgst + "remaining  " + dys + " days to return ' " + book.getTitle() + " ' book  ";
+                    
+                    msg.setContent(msgst);
+                    
+                    session.setAttribute("messege", msg);
+                }
             }
         }
         
@@ -121,7 +115,6 @@ public class TymleafController {
     @GetMapping("/book/delete/{id}")
     public String deleteBook(@PathVariable(value = "id") int id) {
         this.libraryServiceImpl.deleteBook(id);
-        
         issuedServiceImpl.deleteBook(id);
         
         return "redirect:/";

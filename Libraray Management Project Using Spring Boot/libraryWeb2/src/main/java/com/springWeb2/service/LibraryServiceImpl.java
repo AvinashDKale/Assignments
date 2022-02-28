@@ -24,7 +24,6 @@ public class LibraryServiceImpl implements LibraryServiceInterface {
         return libraryRepo.findById(id).get();
     }
     
-    
     @Override
     public BookDao updateBook(BookDao book) {
         return libraryRepo.save(book);
