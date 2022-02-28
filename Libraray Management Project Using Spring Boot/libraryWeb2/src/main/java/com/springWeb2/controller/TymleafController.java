@@ -62,7 +62,7 @@ public class TymleafController {
                 if (p2 <= 10) {
                     String dys = String.valueOf(p2);
                     count = count + 1;
-                    msgst = msgst + "remaining  " + dys + " days to return ' " + book.getTitle() + " ' book  ";
+                    msgst = msgst + "("+count+"). remaining  " + dys + " days to return ' " + book.getTitle() + " ' book  ";
                     
                     msg.setContent(msgst);
                     
