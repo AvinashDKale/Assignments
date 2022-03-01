@@ -1,0 +1,7 @@
+help
+sbt run
+sbt run;
+sbt run ;
+play new foobar
+play new foobar;
+exit
