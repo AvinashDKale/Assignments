@@ -1,7 +1,8 @@
 package controllers;
 
 import play.mvc.*;
-
+import views.html.*;
+import java.time.LocalDate;
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -16,6 +17,9 @@ public class HomeController extends Controller {
      */
     public Result index() {
         return ok(views.html.index.render());
+    }
+    public Result hello() {
+        return ok(views.html.hello.render("Today is "+LocalDate.now()));
     }
 
 }
