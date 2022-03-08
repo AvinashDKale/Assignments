@@ -6,3 +6,4 @@ GET /bookshop controllers.Application.index
 POST /bookshop/book/save/comment/ controllers.Application.saveComment(request:Request)
 #Search a book by Tile
 GET /bookshop/book/search/ controllers.Application.searchByTitle(keyword:String)
+GET /bookshop/book/echo controllers.Application.echoService
