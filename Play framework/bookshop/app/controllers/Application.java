@@ -23,10 +23,7 @@ public Result getBook(String id) {
 }
 @Inject
 FormFactory formFactory;
-DynamicForm requestData = formFactory.form().
-bindFromRequest(request);
-String comment = requestData.get("comment");
- @return
+
 
 public Result saveComment(Http.Request request) {
  DynamicForm requestData = formFactory.form().
@@ -35,8 +32,7 @@ bindFromRequest(request);
  return ok(views.html.savecomment.render());
 }
 public Result searchByTitle(String title) {
- //Query db and get the book details or get from cache added
-    //jgjjjfjhv test
+ //Query db and get the book details or get from cache
  return ok(views.html.searchresults.render());
 }
 

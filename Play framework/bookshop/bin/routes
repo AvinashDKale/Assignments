@@ -1,12 +1,8 @@
 # Home page
-GET /bookshop controllers.
-Application.index
+GET /bookshop controllers.Application.index
 # Show details of a Book
-GET / bookshop /book/:id/ controllers.
-Application.getBook(id:String
+#GET / bookshop/book/:id/ controllers.Application.getBook(id:String)
 # Add a comment to the book
-POST /bookshop/book/save/comment/ controllers.Application.
-saveComment(request:Request)
+POST /bookshop/book/save/comment/ controllers.Application.saveComment(request:Request)
 #Search a book by Tile
-GET /bookshop/book/search/ controllers.
-Application.searchByTitle(keyword:String)
+GET /bookshop/book/search/ controllers.Application.searchByTitle(keyword:String)
