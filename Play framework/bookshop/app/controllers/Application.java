@@ -35,8 +35,7 @@ bindFromRequest(request);
  return ok(views.html.savecomment.render());
 }
 public Result searchByTitle(String title) {
-
-    
+ //Query db and get the book details or get from cache added
  return ok(views.html.searchresults.render());
 }
 
