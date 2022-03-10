@@ -21,6 +21,10 @@
 		role="alert">
 		<span th:text="${session.messege.content}"> </span>
 	</div>
+	<div th:if="${session.messege2}" class="alert alert-warning"
+        role="alert">
+        <span th:text="${session.messege2.content}"> </span>
+    </div>
 	<div align=right sec:authorize="isAuthenticated()">
 		Welcome <b><span sec:authentication="name">Username</span></b> &nbsp;
 		<i><span sec:authentication="principal.authorities">Roles</span></i>

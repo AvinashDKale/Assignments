@@ -1,9 +1,18 @@
 # Home page
-GET /bookshop controllers.Application.index
-# Show details of a Book
-#GET / bookshop/book/:id/ controllers.Application.getBook(id:String)
-# Add a comment to the book
-POST /bookshop/book/save/comment/ controllers.Application.saveComment(request:Request)
-#Search a book by Tile
-GET /bookshop/book/search/ controllers.Application.searchByTitle(keyword:String)
+# An example controller showing a sample home page
+GET /bookshop  controllers.Application.index
+GET /bookshop/book/:id/  controllers.Application.getBook(id:String)
+GET /bookshop/book/search/:keyword/   controllers.Application.searchByTitle(keyword:String)
 GET /bookshop/book/echo controllers.Application.echoService
+GET /bookshop/book/:id/page/$page<[0-9]+>/ controllers.Application.fetchBookpage(id:String, page:Integer)
+GET /bookshop/example/largeresponse controllers.Application.processLargeResponse()
+#GET /bookshop/authors/:limit/   controllers.Application.authors (limit:Integer)
+GET /bookshop/showcomment/ controllers.Application.showComment(userid ?= null)
+GET /bookshop/contact controllers.Application.contact()
+GET /bookshop/book/top controllers.Application.topThreeBooks()
+POST /bookshop/book/save/comment/:request/ controllers.Application.saveComment(request:Request)
+POST /greeting controllers.Application.acknowledgeGreeting (request:Request)
+POST /greeting/xml controllers.Application.acknowledgeGreetingXML(request:Request)
+POST /greeting/xml/jaxb/:request/ controllers.Application.acknowledgeGreetingXMLJaxbVersion(request:Request)
+# Map static resources from the /public folder to the /assets URL path
+GET /assets/*file controllers.Assets.versioned (path="/public", file: Asset)

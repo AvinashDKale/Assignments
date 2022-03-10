@@ -54,15 +54,42 @@ public class TymleafController {
             
             int count = 0;
             String msgst = "";
+            String fin = "";
+            int totalfine = 0;
+            int bkcn = 0;
+            System.out.println(rawList.size());
             for (IssuedBookDao book : rawList) {
+                bkcn = bkcn + 1;
                 Messege msg = new Messege();
+                Messege fine = new Messege();
                 LocalDate tempDate = book.getReturn_date();
+                int i = tempDate.compareTo(LocalDate.now());
+                
                 int p2 = (int) ChronoUnit.DAYS.between(LocalDate.now(), tempDate);
+                System.out.println(tempDate + "  " + i + "Days are "
+                        + ChronoUnit.DAYS.between(tempDate, LocalDate.now()) + rawList.size() + " " + bkcn);
+                
+                if (i < 0) {
+                    
+                    if (bkcn == rawList.size()) {
+                        totalfine = totalfine + ((-i) * 10);
+                        fin = fin + "'" + book.getTitle() + "'" + " has fine " + ((-i) * 10)
+                                + " rueppes. and 'Total fine is  " + totalfine + "'. ";
+                        fine.setContent(fin);
+                        session.setAttribute("messege2", fine);
+                    } else {
+                        totalfine = totalfine + ((-i) * 10);
+                        fin = fin + "'" + book.getTitle() + "'" + " has fine " + ((-i) * 10) + " rueppes . ";
+                        fine.setContent(fin);
+                        session.setAttribute("messege2", fine);
+                    }
+                }
                 
                 if (p2 <= 10) {
                     String dys = String.valueOf(p2);
                     count = count + 1;
-                    msgst = msgst + "("+count+"). remaining  " + dys + " days to return ' " + book.getTitle() + " ' book  ";
+                    msgst = msgst + "(" + count + "). remaining  " + dys + " days to return ' " + book.getTitle()
+                            + " ' book  ";
                     
                     msg.setContent(msgst);
                     

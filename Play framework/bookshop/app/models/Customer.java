@@ -1,7 +1,6 @@
 package models;
-
-import java.util.List;
 import controllers.Order;
+import java.util.List;
 public class Customer {
  private long id;
  private String name;
@@ -9,12 +8,10 @@ public class Customer {
  private boolean isActive;
  private List<Order> orders;
  public List<Order> getOrders() {
-    return orders;
- //Logic
+ return null;
  }
  public boolean deactivate() {
-    return isActive;
  //Logic and validation to deactivate a customer
+ return false;
  }
 }
-
